@@ -1,0 +1,162 @@
+.button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: var(--transition-smooth);
+}
+
+.button .icon {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.button-primary {
+    background: var(--accent);
+    color: #171717;
+}
+
+.button-primary:hover {
+    transform: translateY(-2px);
+    background: var(--accent-hover);
+    box-shadow: 0 8px 20px rgb(255 98 62 / 30%);
+}
+
+.button-secondary {
+    border-color: var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.button-secondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
+.icon-button {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.icon-button:hover {
+    background: var(--bg-tertiary);
+}
+
+.button:focus-visible,
+.icon-button:focus-visible {
+    outline-color: var(--focus-ring);
+}
+
+.icon-button .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.eyebrow-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.joy-cursor {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    transform: translate3d(-100px, -100px, 0);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform;
+    transition: transform 0.06s ease-out, opacity 0.16s ease;
+}
+
+.joy-cursor::before,
+.joy-cursor::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    content: "";
+    transition: transform 0.16s ease, background-color 0.16s ease;
+}
+
+.joy-cursor::before {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--accent);
+    background: rgb(255 98 62 / 7%);
+    box-shadow: 0 0 0 1px rgb(255 98 62 / 9%);
+}
+
+.joy-cursor::after {
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+}
+
+.joy-cursor.is-interactive::before {
+    transform: translate(-50%, -50%) scale(1.22);
+    background: rgb(255 98 62 / 14%);
+}
+
+.joy-cursor.is-interactive::after {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    html.has-custom-cursor,
+    html.has-custom-cursor body,
+    html.has-custom-cursor body * {
+        cursor: none !important;
+    }
+
+    html.has-custom-cursor .joy-cursor {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .joy-cursor,
+    .joy-cursor::before,
+    .joy-cursor::after {
+        transition: none;
+    }
+}

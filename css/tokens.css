@@ -1,0 +1,56 @@
+:root {
+    color-scheme: light;
+    --bg-primary: #FAF9F6;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F3F1EC;
+    --header-bg: rgb(250 249 246 / 86%);
+    --text-primary: #171717;
+    --text-secondary: #666666;
+    --text-muted: #696969;
+    --accent: #FF623E;
+    --accent-hover: #E94D2B;
+    --accent-text: #B23B22;
+    --focus-ring: #B23B22;
+    --error-text: #B42318;
+    --accent-soft: #FFE5DC;
+    --accent-soft-hover: #FDD5C7;
+    --border-color: #E6E4DF;
+    --card-shadow: 0 10px 30px -10px rgb(0 0 0 / 5%);
+    --card-shadow-hover: 0 20px 40px -15px rgb(0 0 0 / 12%);
+    --modal-backdrop: rgb(23 23 23 / 60%);
+    --newsletter-bg: #171717;
+    --newsletter-text: #FAF9F6;
+    --newsletter-field-bg: rgb(255 255 255 / 12%);
+    --newsletter-field-border: rgb(255 255 255 / 28%);
+    --newsletter-error: #FFD1C7;
+    --newsletter-success: #B8F0C4;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 9999px;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    --bg-primary: #121212;
+    --bg-secondary: #1A1A1A;
+    --bg-tertiary: #242424;
+    --header-bg: rgb(18 18 18 / 86%);
+    --text-primary: #F5F5F5;
+    --text-secondary: #A3A3A3;
+    --text-muted: #A3A3A3;
+    --accent: #FF623E;
+    --accent-hover: #FF7B5B;
+    --accent-text: #FF623E;
+    --focus-ring: #FF623E;
+    --error-text: #FF8173;
+    --accent-soft: #2C1E1A;
+    --accent-soft-hover: #3D2823;
+    --border-color: #2A2A2A;
+    --card-shadow: 0 10px 30px -10px rgb(0 0 0 / 50%);
+    --card-shadow-hover: 0 20px 40px -15px rgb(0 0 0 / 70%);
+    --modal-backdrop: rgb(0 0 0 / 80%);
+}

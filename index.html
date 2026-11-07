@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FAF9F6" />
+    <meta
+      name="description"
+      content="Discover extraordinary events, connect with incredible communities, and create unforgettable memories."
+    />
+    <title>JOY EVENTS</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg?v=3">
+    <link rel="shortcut icon" href="./assets/icons/favicon.svg?v=3">    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/site-sections.css" />
+    <link rel="stylesheet" href="css/overlays.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="brand" href="#discover" aria-label="JOY EVENTS home">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span>JOY EVENTS</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a class="nav-link is-active" href="#discover" aria-current="page"
+            >Discover</a
+          >
+          <a class="nav-link" href="#events">Events</a>
+          <a class="nav-link" href="#categories">Categories</a>
+          <a class="nav-link" href="#why-us">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="icon-button theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to dark mode"
+            title="Switch theme"
+          >
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.9 13A8.5 8.5 0 0 1 11 3.1 8.5 8.5 0 1 0 20.9 13Z" />
+            </svg>
+            <svg
+              class="icon icon-sun"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              hidden
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+              />
+            </svg>
+          </button>
+          <button
+            class="button button-secondary my-tickets-nav-button"
+            type="button"
+            data-open-my-tickets
+          >
+            My Tickets
+          </button>
+          <a class="button button-primary nav-cta" href="#events">
+            Explore Events
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-7-7 7 7-7 7" />
+            </svg>
+          </a>
+          <button
+            class="icon-button menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <div
+        class="mobile-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+      >
+        <div class="mobile-menu-heading">
+          <a
+            class="brand"
+            href="#discover"
+            data-menu-link
+            aria-label="JOY EVENTS home"
+          >
+            <span class="brand-mark" aria-hidden="true">J</span>
+            <span>JOY EVENTS</span>
+          </a>
+          <button
+            class="icon-button"
+            type="button"
+            data-menu-close
+            aria-label="Close menu"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m18 6-12 12M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav" aria-label="Mobile navigation links">
+          <a href="#discover" data-menu-link>Discover</a>
+          <a href="#events" data-menu-link>Events</a>
+          <a href="#categories" data-menu-link>Categories</a>
+          <a href="#why-us" data-menu-link>About</a>
+          <button
+            class="mobile-nav-ticket-button"
+            type="button"
+            data-open-my-tickets
+            data-menu-link
+          >
+            My Tickets
+          </button>
+        </nav>
+        <a
+          class="button button-primary mobile-menu-cta"
+          href="#events"
+          data-menu-link
+        >
+          Explore Events
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-7-7 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero" id="discover" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span> FIND YOUR
+              NEXT EXPERIENCE
+            </p>
+            <h1 class="hero-title" id="hero-title">
+              Make Every Moment<br />
+              <span class="serif">An Experience.</span>
+            </h1>
+            <p class="hero-description">
+              Discover extraordinary events, connect with incredible
+              communities, and create unforgettable memories around the world.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#events">
+                Explore Events
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14m-7-7 7 7-7 7" />
+                </svg>
+              </a>
+              <a class="button button-secondary" href="#categories"
+                >Browse Categories</a
+              >
+            </div>
+
+            <div class="hero-highlights" aria-label="Experience categories">
+              <div class="highlight-item">
+                <strong>Music</strong>
+                <span>Live &amp; local</span>
+              </div>
+              <div class="highlight-item">
+                <strong>Culture</strong>
+                <span>Art &amp; ideas</span>
+              </div>
+              <div class="highlight-item">
+                <strong>Community</strong>
+                <span>Meet &amp; connect</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-image-frame">
+              <img
+                class="hero-image"
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                alt="A crowd enjoying a live music event"
+                fetchpriority="high"
+              />
+            </div>
+            <article class="floating-card floating-card-one">
+              <span class="floating-card-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path
+                    d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Zm7 11 .9 2.1L22 17l-2.1.9L19 20l-.9-2.1L16 17l2.1-.9L19 14Z"
+                  />
+                </svg>
+              </span>
+              <span class="floating-card-copy">
+                <strong>A night worth remembering</strong>
+                <span>Music, art &amp; community</span>
+              </span>
+            </article>
+            <article class="floating-card floating-card-two">
+              <span class="floating-card-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <rect x="3" y="5" width="18" height="16" rx="2" />
+                  <path d="M16 3v4M8 3v4M3 10h18" />
+                </svg>
+              </span>
+              <span class="floating-card-copy">
+                <strong>Make room for discovery</strong>
+                <span>Find an experience that feels like you</span>
+              </span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="spotlight-section"
+        id="upcoming-spotlight"
+        aria-labelledby="spotlight-heading"
+      >
+        <div class="container">
+          <header class="spotlight-section-heading">
+            <p class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span> COMING UP
+              NEXT
+            </p>
+            <h2 class="spotlight-section-title" id="spotlight-heading">
+              Upcoming Event Spotlight
+            </h2>
+          </header>
+
+          <article class="spotlight-card" data-spotlight-card hidden>
+            <div class="spotlight-content">
+              <span class="spotlight-category" data-spotlight-category></span>
+              <h3 class="spotlight-event-title">
+                <button
+                  class="spotlight-title-button"
+                  type="button"
+                  data-spotlight-title
+                  data-open-event-details
+                ></button>
+              </h3>
+              <p class="spotlight-description" data-spotlight-description></p>
+
+              <dl class="spotlight-facts">
+                <div class="spotlight-fact">
+                  <dt>Date &amp; time</dt>
+                  <dd data-spotlight-datetime></dd>
+                </div>
+                <div class="spotlight-fact">
+                  <dt>Venue</dt>
+                  <dd data-spotlight-venue></dd>
+                </div>
+                <div class="spotlight-fact">
+                  <dt>Location</dt>
+                  <dd data-spotlight-location></dd>
+                </div>
+              </dl>
+
+              <section
+                class="spotlight-countdown"
+                aria-label="Countdown to the next event"
+              >
+                <p
+                  class="spotlight-countdown-heading"
+                  data-spotlight-countdown-status
+                >
+                  Starts in
+                </p>
+                <div class="spotlight-countdown-units" aria-live="off">
+                  <div class="spotlight-countdown-unit">
+                    <span data-spotlight-days>00</span><small>Days</small>
+                  </div>
+                  <div class="spotlight-countdown-unit">
+                    <span data-spotlight-hours>00</span><small>Hours</small>
+                  </div>
+                  <div class="spotlight-countdown-unit">
+                    <span data-spotlight-minutes>00</span><small>Minutes</small>
+                  </div>
+                  <div class="spotlight-countdown-unit">
+                    <span data-spotlight-seconds>00</span><small>Seconds</small>
+                  </div>
+                </div>
+              </section>
+
+              <div class="spotlight-actions">
+                <div class="spotlight-price-block">
+                  <span>Sample ticket price</span>
+                  <strong data-spotlight-price></strong>
+                </div>
+                <button
+                  class="button button-primary spotlight-details-button"
+                  type="button"
+                  data-spotlight-details
+                >
+                  View Details <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+            <div class="spotlight-media" data-spotlight-media>
+              <button
+                class="spotlight-image-trigger"
+                type="button"
+                data-spotlight-image
+                data-open-event-details
+              ></button>
+            </div>
+          </article>
+
+          <div class="spotlight-empty" data-spotlight-empty hidden>
+            <h3>No upcoming events right now</h3>
+            <p>
+              There are no future events with a valid date and time. Check back
+              soon for new experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="featured-section"
+        id="featured"
+        aria-labelledby="featured-title"
+      >
+        <div class="container">
+          <header class="discovery-heading featured-heading">
+            <div>
+              <p class="eyebrow">
+                <span class="eyebrow-dot" aria-hidden="true"></span> A FEW
+                SAMPLE HIGHLIGHTS
+              </p>
+              <h2 class="discovery-title" id="featured-title">
+                Featured Events
+              </h2>
+              <p class="discovery-subtitle">
+                Selected experiences from our illustrative upcoming listings.
+              </p>
+            </div>
+            <a class="button button-secondary" href="#events"
+              >Browse all events</a
+            >
+          </header>
+          <div
+            class="events-grid"
+            id="featured-events-grid"
+            aria-label="Featured sample events"
+          ></div>
+        </div>
+      </section>
+
+      <section
+        class="discovery-section"
+        id="events"
+        aria-labelledby="events-title"
+      >
+        <div class="container">
+          <header class="discovery-heading">
+            <div>
+              <p class="eyebrow">
+                <span class="eyebrow-dot" aria-hidden="true"></span> FIND
+                SOMETHING TO LOOK FORWARD TO
+              </p>
+              <h2 class="discovery-title" id="events-title">
+                Discover Upcoming Events
+              </h2>
+              <p class="discovery-subtitle">
+                Browse gatherings, ideas and experiences from cities across
+                India.
+              </p>
+            </div>
+          </header>
+
+          <div class="event-filters" aria-label="Search and filter events">
+            <div class="event-search-row">
+              <label class="search-field" for="event-search">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m20 20-4-4" />
+                </svg>
+                <span class="sr-only">Search events by name or keyword</span>
+                <input
+                  id="event-search"
+                  type="search"
+                  placeholder="Search events by name or keyword"
+                  autocomplete="off"
+                  aria-describedby="event-results-status"
+                />
+              </label>
+              <button
+                class="button button-secondary reset-filters"
+                id="reset-filters"
+                type="button"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8" />
+                  <path d="M3 3v5h5" />
+                </svg>
+                Reset filters
+              </button>
+            </div>
+
+            <div class="event-filter-row">
+              <div class="category-filter-wrap">
+                <span class="filter-label" id="category-filter-label"
+                  >Category</span
+                >
+                <div
+                  class="category-filter"
+                  id="category-filter"
+                  role="group"
+                  aria-labelledby="category-filter-label"
+                ></div>
+              </div>
+              <div class="select-filters">
+                <label class="select-filter">
+                  <span class="filter-label">Location</span>
+                  <select
+                    id="location-filter"
+                    aria-label="Filter events by location"
+                  >
+                    <option value="all">All cities</option>
+                  </select>
+                </label>
+                <label class="select-filter">
+                  <span class="filter-label">Sort by</span>
+                  <select id="sort-filter" aria-label="Sort events">
+                    <option value="date-asc">Date: soonest</option>
+                    <option value="date-desc">Date: latest</option>
+                    <option value="price-asc">Price: low to high</option>
+                    <option value="price-desc">Price: high to low</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <p
+            class="event-results-status"
+            id="event-results-status"
+            aria-live="polite"
+            aria-atomic="true"
+          ></p>
+          <div class="events-grid" id="events-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section
+        class="categories-section"
+        id="categories"
+        aria-labelledby="categories-title"
+      >
+        <div class="container">
+          <header class="site-section-heading category-section-heading">
+            <div>
+              <h2 class="site-section-title" id="categories-title">
+                Explore by Category
+              </h2>
+              <p class="site-section-subtitle">Find what inspires you most.</p>
+            </div>
+            <p class="category-section-note">
+              Counts reflect illustrative sample listings.
+            </p>
+          </header>
+          <ul
+            class="category-grid"
+            data-category-grid
+            aria-label="Browse sample events by category"
+          ></ul>
+        </div>
+      </section>
+
+      <section
+        class="features-section"
+        id="why-us"
+        aria-labelledby="why-us-title"
+      >
+        <div class="container">
+          <header class="site-section-heading features-heading">
+            <h2 class="site-section-title" id="why-us-title">
+              Why JOY EVENTS?
+            </h2>
+            <p class="site-section-subtitle">
+              Designed to elevate how you experience live culture.
+            </p>
+          </header>
+
+          <div class="features-grid">
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m15.8 8.2-2.4 5.2-5.2 2.4 2.4-5.2z" />
+                </svg>
+              </span>
+              <h3 class="feature-title">Discover Amazing Events</h3>
+              <p class="feature-description">
+                Curated recommendations tailored to your unique tastes,
+                location, and passions.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M13 2 4 14h7l-1 8 10-13h-7z" />
+                </svg>
+              </span>
+              <h3 class="feature-title">Easy Registration</h3>
+              <p class="feature-description">
+                Reserve your spot in seconds with seamless digital pass
+                generation and instant access.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path
+                    d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                  />
+                </svg>
+              </span>
+              <h3 class="feature-title">Curated Communities</h3>
+              <p class="feature-description">
+                Meet visionary creators, industry leaders, and like-minded
+                enthusiasts effortlessly.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"
+                  />
+                </svg>
+              </span>
+              <h3 class="feature-title">Unforgettable Memories</h3>
+              <p class="feature-description">
+                From intimate artist pop-ups to massive tech summits, experience
+                moments that last.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="newsletter-section"
+        id="newsletter"
+        aria-labelledby="newsletter-title"
+      >
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="newsletter-content">
+              <p class="newsletter-eyebrow">A LITTLE JOY IN YOUR INBOX</p>
+              <h2 class="newsletter-title" id="newsletter-title">
+                Stay in the Loop.
+              </h2>
+              <p class="newsletter-description">
+                Get notified about exciting events, exclusive VIP access, and
+                secret pop-ups in your city.
+              </p>
+              <form class="newsletter-form" data-newsletter-form novalidate>
+                <label class="sr-only" for="newsletter-email"
+                  >Email address</label
+                >
+                <input
+                  class="newsletter-input"
+                  id="newsletter-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="Enter your email address"
+                  aria-describedby="newsletter-feedback newsletter-demo-note"
+                  required
+                />
+                <button
+                  class="button button-primary newsletter-submit"
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <p
+                class="newsletter-feedback"
+                id="newsletter-feedback"
+                data-newsletter-feedback
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+      <div class="container">
+        <div class="site-footer-grid">
+          <div class="site-footer-brand">
+            <a class="brand" href="#discover" aria-label="JOY EVENTS home">
+              <span class="brand-mark" aria-hidden="true">J</span>
+              <span>JOY EVENTS</span>
+            </a>
+            <p>
+              Explore illustrative event listings, save sample passes in this
+              browser, and find your next experience across India.
+            </p>
+          </div>
+
+          <nav class="footer-column" aria-labelledby="footer-platform-title">
+            <h2 class="footer-heading" id="footer-platform-title">Platform</h2>
+            <ul class="footer-links">
+              <li><a href="#events">Discover Events</a></li>
+              <li><a href="#categories">Browse Categories</a></li>
+              <li><a href="#events">Upcoming Events</a></li>
+              <li><a href="#why-us">Why JOY EVENTS?</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-column" aria-labelledby="footer-categories-title">
+            <h2 class="footer-heading" id="footer-categories-title">
+              Categories
+            </h2>
+            <ul class="footer-links" data-footer-categories></ul>
+          </nav>
+
+          <nav
+            class="footer-column"
+            id="connect"
+            aria-labelledby="footer-connect-title"
+          >
+            <h2 class="footer-heading" id="footer-connect-title">Connect</h2>
+            <ul class="footer-links">
+              <li><a href="#newsletter">Newsletter</a></li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+              </li>
+              <li>
+                <a href="https://x.com/" target="_blank">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://x.com/" target="_blank">X</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="site-footer-bottom">
+          <p>© 2026 JOY EVENTS ·</p>
+          <a class="footer-back-to-top" href="#discover">Back to top <span aria-hidden="true">↑</span></a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal-backdrop"
+      id="event-details-modal"
+      data-event-details-modal
+      aria-hidden="true"
+    >
+      <section
+        class="event-details-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="event-details-title"
+        tabindex="-1"
+      >
+        <button
+          class="modal-close-button"
+          type="button"
+          data-close-event-details
+          aria-label="Close event details"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m18 6-12 12M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="event-details-content" data-event-details-content></div>
+      </section>
+    </div>
+
+    <div
+      class="modal-backdrop ticket-modal-backdrop"
+      id="registration-modal"
+      data-ticket-modal
+      aria-hidden="true"
+    >
+      <section
+        class="event-details-dialog ticket-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="registration-title"
+        tabindex="-1"
+      >
+        <button
+          class="modal-close-button"
+          type="button"
+          data-close-modal
+          aria-label="Close registration"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m18 6-12 12M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="event-detail-body ticket-modal-body">
+          <header class="ticket-modal-header">
+            <span class="event-detail-category">Reserve tickets</span>
+            <h2 class="event-detail-title" id="registration-title">
+              Register for this event
+            </h2>
+            <p class="event-detail-copy">
+              Enter your details to save a sample ticket in this browser. No
+              payment is collected.
+            </p>
+          </header>
+
+          <form class="registration-form" data-registration-form novalidate>
+            <input type="hidden" name="eventId" data-registration-event-id />
+
+            <div
+              class="selected-event-summary"
+              data-selected-event-summary
+              aria-describedby="error-eventId"
+            >
+              <p class="selected-event-title" data-selected-event-title>
+                Select an event to continue
+              </p>
+              <p class="selected-event-meta" data-selected-event-meta></p>
+              <p class="selected-event-meta" data-selected-event-venue></p>
+              <p class="selected-event-price" data-ticket-unit-price></p>
+            </div>
+            <p
+              class="ticket-field-error"
+              id="error-eventId"
+              data-error-for="eventId"
+              aria-live="polite"
+            ></p>
+
+            <div class="ticket-form-grid">
+              <div class="ticket-field ticket-field-full">
+                <label class="ticket-field-label" for="registration-name"
+                  >Full name</label
+                >
+                <input
+                  class="ticket-form-control"
+                  id="registration-name"
+                  name="fullName"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Your full name"
+                  data-registration-field="fullName"
+                  aria-describedby="error-fullName"
+                  required
+                />
+                <p
+                  class="ticket-field-error"
+                  id="error-fullName"
+                  data-error-for="fullName"
+                  aria-live="polite"
+                ></p>
+              </div>
+              <div class="ticket-field">
+                <label class="ticket-field-label" for="registration-email"
+                  >Email address</label
+                >
+                <input
+                  class="ticket-form-control"
+                  id="registration-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  data-registration-field="email"
+                  aria-describedby="error-email"
+                  required
+                />
+                <p
+                  class="ticket-field-error"
+                  id="error-email"
+                  data-error-for="email"
+                  aria-live="polite"
+                ></p>
+              </div>
+              <div class="ticket-field">
+                <label class="ticket-field-label" for="registration-phone"
+                  >Phone number</label
+                >
+                <input
+                  class="ticket-form-control"
+                  id="registration-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  placeholder="+91 98765 43210"
+                  data-registration-field="phone"
+                  aria-describedby="error-phone"
+                  required
+                />
+                <p
+                  class="ticket-field-error"
+                  id="error-phone"
+                  data-error-for="phone"
+                  aria-live="polite"
+                ></p>
+              </div>
+              <div class="ticket-field">
+                <label class="ticket-field-label" for="registration-quantity"
+                  >Number of tickets</label
+                >
+                <input
+                  class="ticket-form-control"
+                  id="registration-quantity"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="1"
+                  inputmode="numeric"
+                  data-registration-field="quantity"
+                  aria-describedby="error-quantity"
+                  required
+                />
+                <p
+                  class="ticket-field-error"
+                  id="error-quantity"
+                  data-error-for="quantity"
+                  aria-live="polite"
+                ></p>
+              </div>
+            </div>
+
+            <div
+              class="registration-total"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <span>Sample total</span>
+              <strong data-ticket-total>—</strong>
+            </div>
+            <p class="ticket-demo-note">
+              Frontend demonstration only · No payment is taken.
+            </p>
+            <button
+              class="button button-primary registration-submit"
+              type="submit"
+            >
+              Confirm registration
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <div
+      class="modal-backdrop ticket-modal-backdrop"
+      id="ticket-confirmation-modal"
+      data-ticket-modal
+      aria-hidden="true"
+    >
+      <section
+        class="event-details-dialog ticket-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="ticket-confirmation-title"
+        tabindex="-1"
+      >
+        <button
+          class="modal-close-button"
+          type="button"
+          data-close-modal
+          aria-label="Close ticket confirmation"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m18 6-12 12M6 6l12 12" />
+          </svg>
+        </button>
+        <div
+          class="event-detail-body ticket-modal-body"
+          data-ticket-confirmation-content
+        ></div>
+      </section>
+    </div>
+
+    <div
+      class="modal-backdrop ticket-modal-backdrop"
+      id="my-tickets-modal"
+      data-ticket-modal
+      aria-hidden="true"
+    >
+      <section
+        class="event-details-dialog ticket-modal-dialog my-tickets-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="my-tickets-title"
+        tabindex="-1"
+      >
+        <button
+          class="modal-close-button"
+          type="button"
+          data-close-modal
+          aria-label="Close My Tickets"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m18 6-12 12M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="event-detail-body ticket-modal-body">
+          <header class="ticket-modal-header">
+            <span class="event-detail-category">Saved passes</span>
+            <h2 class="event-detail-title" id="my-tickets-title">My Tickets</h2>
+            
+          </header>
+          <div
+            class="saved-tickets-list"
+            data-saved-tickets-list
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+    </div>
+
+    <div
+      class="toast-container"
+      data-toast-container
+      aria-live="polite"
+      aria-atomic="false"
+    ></div>
+    <div class="joy-cursor" data-custom-cursor aria-hidden="true"></div>
+  </body>
+</html>
