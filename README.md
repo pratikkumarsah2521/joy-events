@@ -1,4 +1,4 @@
-# JOY EVENTS — Version 3
+# JOY EVENTS
 
 JOY EVENTS is a responsive frontend demonstration for discovering illustrative events in Indian cities, viewing event details, and saving sample ticket registrations in the current browser. Listings and venues are fictional examples, and the site does not process payments.
 
